@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://33uee5uclf.ufs.sh/f/fa600f97-6cf2-4759-8641-3093d13591bf-6rrk6b.png" alt="Resonance" width="720" />
+
 
 <br />
 <br />
@@ -29,27 +29,6 @@
 </div>
 
 <br />
-
-## 📚 Tutorial
-
-[![Watch on YouTube](https://img.shields.io/badge/Watch_the_Full_Course-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://cwa.run/resonance-gh-yt)
-
-Learn how to build this entire project from scratch in a **free 12-hour video course** on YouTube. The tutorial covers every aspect of the platform—authentication, text-to-speech generation, voice cloning, subscription billing, and production deployment.
-
-Each chapter has a corresponding Git branch for easy reference:
-
-| Branch                           | Chapter                                    |
-| -------------------------------- | ------------------------------------------ |
-| `main`                           | Complete project with all features         |
-| `02-dashboard`                   | Dashboard layout and navigation setup      |
-| `03-text-to-speech-ui`           | TTS interface and voice controls           |
-| `04-backend-infrastructure`      | Backend setup (tRPC, R2, Prisma, database) |
-| `05-voice-selection`             | Voice library and management               |
-| `06-tts-generation-audio-player` | Audio generation and playback              |
-| `07-tts-history-polish`          | History management and UI refinement       |
-| `bonus-sentry-error-monitoring`  | Error tracking and monitoring              |
-
----
 
 ## 🎯 Project Overview
 
