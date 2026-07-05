@@ -5,6 +5,7 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "@/components/ui/sonner";
 import { ClerkProvider } from "@clerk/nextjs";
 import { TRPCReactProvider } from "@/trpc/client";
+import { shadcn } from "@clerk/ui/themes";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,19 +31,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <TRPCReactProvider>
-        <html lang="en">
-          <body
-            className={`${inter.variable} ${geistMono.variable} antialiased`}
-          >
+    <html lang="en">
+      <body
+        className={`${inter.variable} ${geistMono.variable} antialiased`}
+      >
+        <ClerkProvider appearance={{ theme: shadcn }}>
+          <TRPCReactProvider>
             <NuqsAdapter>
               {children}
             </NuqsAdapter>
             <Toaster />
-          </body>
-        </html>
-      </TRPCReactProvider>
-    </ClerkProvider>
+          </TRPCReactProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }
