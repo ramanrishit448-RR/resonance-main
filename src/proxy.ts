@@ -8,6 +8,12 @@ const isOrgSelectionRoute = createRouteMatcher(["/org-selection(.*)"]);
 export default clerkMiddleware(async (auth, req) => {
   const { userId, orgId } = await auth();
 
+  const url = new URL(req.url);
+  const hasClerkParam = Array.from(url.searchParams.keys()).some(key => key.startsWith("__clerk_"));
+  if (hasClerkParam) {
+    return NextResponse.next();
+  }
+
   // Allow public routes
   if (isPublicRoute(req)) {
     return NextResponse.next();
